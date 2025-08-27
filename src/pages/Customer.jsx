@@ -2,8 +2,8 @@ import ParcelCard from '../components/ParcelCard'
 import { StatusBadge } from '../components/StatusBadge'
 
 const mockParcels = [
-  { tracking: 'ICY123456789', status: 'Arrived in Zambia', origin: 'Guangzhou, CN', destination: 'Lusaka, ZM', eta: 'Today', weight: '2.3 kg' },
-  { tracking: 'ICY987654321', status: 'In Transit', origin: 'Dubai, AE', destination: 'Ndola, ZM', eta: 'Aug 21', weight: '1.0 kg' },
+  { tracking: 'ICY123456789', status: 'Arrived in Zambia', origin: 'Cape Town, SA', destination: 'Lusaka, ZM', eta: 'Today', weight: '2.3 kg' },
+  { tracking: 'ICY987654321', status: 'In Transit', origin: 'London, ENG', destination: 'Ndola, ZM', eta: 'Aug 21', weight: '1.0 kg' },
 ]
 
 export default function Customer() {
