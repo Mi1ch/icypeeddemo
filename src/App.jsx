@@ -1,9 +1,15 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Customer from './pages/Customer'
-import Driver from './pages/Driver'
-import Admin from './pages/Admin'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+
+// Customer flow pages
+import CustomerHome from "./pages/CustomerHome";
+import TrackParcels from "./pages/TrackParcels";
+import RequestDelivery from "./pages/RequestDelivery";
+
+// Existing apps
+import Driver from "./pages/Driver";
+import Admin from "./pages/Admin";
 
 export default function App() {
   return (
@@ -11,13 +17,20 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/customer" element={<Customer />} />
+
+        {/* Customer app */}
+        <Route path="/customer" element={<CustomerHome />} />
+        <Route path="/customer/track" element={<TrackParcels />} />
+        <Route path="/customer/request" element={<RequestDelivery />} />
+
+        {/* Driver + Admin (unchanged) */}
         <Route path="/driver" element={<Driver />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
+
       <footer className="mt-auto py-8 text-center text-xs text-slate-500">
         © {new Date().getFullYear()} Icypeed — Demo UI
       </footer>
     </div>
-  )
+  );
 }
